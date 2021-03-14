@@ -1,12 +1,15 @@
 import React from 'react';
 import Button from './Button';
+import Center from '../Center/Center';
 
 export default {
     title: 'Form/Button',
     component: Button,
     args: {
         children: 'Button'
-    }
+    },
+    // decorators are the components that wraps the story
+    decorators: [story => <Center>{story()}</Center>]
 }
 
 export const Primary = () => <Button variant='primary'>Primary</Button>
@@ -27,3 +30,4 @@ SecondaryA.args = {
     variant: 'secondary',
     children: 'Secondary Args'
 }
+
