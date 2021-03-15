@@ -1,8 +1,3 @@
-import React from 'react';
-import { addDecorator } from '@storybook/react';
-import Center from '../src/components/Center/Center';
-import { ThemeProvider, theme, CSSReset } from '@chakra-ui/react';
-
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   // Sorting
@@ -12,7 +7,3 @@ export const parameters = {
   },
 }
 
-addDecorator(story => <ThemeProvider theme={theme}>
-  <CSSReset />
-  {story()}
-</ThemeProvider>);
