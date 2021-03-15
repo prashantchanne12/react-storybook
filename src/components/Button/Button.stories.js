@@ -9,7 +9,10 @@ export default {
         children: 'Button'
     },
     // decorators are the components that wraps the story
-    decorators: [story => <Center>{story()}</Center>]
+    decorators: [story => <Center>{story()}</Center>],
+    argTypes: {
+        onClick: { action: 'clicked' }
+    }
 }
 
 export const Primary = () => <Button variant='primary'>Primary</Button>
